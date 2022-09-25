@@ -13,6 +13,6 @@ namespace Epoll.Core
         EpollModel GetEpoll(string id);
         EpollModel AddEpoll(EpollModel epollModel);
         EpollModel UpdateEpoll(EpollModel epollModel);
-        void  DeleteEpoll(string id);
+       
     }
 }

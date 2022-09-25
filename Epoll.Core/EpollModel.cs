@@ -31,32 +31,3 @@ namespace Epoll.Core
 
 
 
-
-//array Object that stores options > need noSQL
-/*
- [0] = [{id:1, title: "yes", "votes: 1",  
- [1] = [{id:1, title: "yes", "votes: 2",  
- [2] = [{id:1, title: "yes", "votes: 3",  
- */
-
-/*
-    "options": [
-        {
-            "id": 1,
-            "title": "Yes",
-            "votes": 0
-        },
-        {
-            "id": 2,
-            "title": "No",
-            "votes": 1
-        },
-        {
-            "id": 3,
-            "title": "Cool, another option",
-            "votes": 0
-        }
- 
- 
- 
- */

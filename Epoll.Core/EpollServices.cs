@@ -26,12 +26,6 @@ namespace Epoll.Core
             return epollModel;
         }
 
-        //where the passed id equals  Imongocollection <model> id
-        public void DeleteEpoll(string id) 
-        {
-            _epollModel.DeleteOne(epollModel => epollModel.Id == id); 
-        } 
-
         public EpollModel UpdateEpoll(EpollModel epollModel)
         {
            //call getpoll to pass id  and if its exists then replace the one

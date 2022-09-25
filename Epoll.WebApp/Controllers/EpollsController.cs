@@ -11,11 +11,11 @@ namespace Epoll.WebApp.Controllers
     //controller handles the endpoints
     [ApiController]
     [Route("[controller]")]
-    public class EpollsController : ControllerBase
+    public class PollsController : ControllerBase
     {
         private readonly IEpollServices _epollServices;
         //injection
-        public EpollsController(IEpollServices epollServices)
+        public PollsController(IEpollServices epollServices)
         {
             _epollServices = epollServices;
         }
@@ -36,7 +36,8 @@ namespace Epoll.WebApp.Controllers
         }
 
         //create new poll
-        [HttpPost]
+        
+        [HttpPost("add/")]
         public IActionResult AddEpoll(EpollModel epollModel)
         {
             //return 
@@ -45,18 +46,12 @@ namespace Epoll.WebApp.Controllers
             return CreatedAtRoute("GetEpoll", new { id = epollModel.Id }, epollModel);
         }
 
-        [HttpPut]
+        [HttpPut("id/vote/option/")]
         public IActionResult UpdateEpoll(EpollModel epollModel)
         {
             return Ok(_epollServices.UpdateEpoll(epollModel));
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteEpoll(string id)
-        {
-            _epollServices.DeleteEpoll(id);
-            return NoContent();
-        }
    
     }
 }//go to IEPOLLServices
