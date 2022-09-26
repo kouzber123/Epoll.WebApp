@@ -33,17 +33,17 @@ CONNECTION_STRING = mongodb+srv://tom:123@cluster0.vttgrnm.mongodb.net/EpollDb?r
 
 in order to do the same use nuget packet manager console to 
 
-init the user-secrets -p {proj name}
+init the user-secrets -p {proj name} - type the following : 
 
-dotnet user-secrets init -p Epoll.WebApp 
+1) dotnet user-secrets init -p Epoll.WebApp 
 
-then add CONNECTION_STRING = mongodb+srv://tom:123@cluster0.vttgrnm.mongodb.net/EpollDb?retryWrites=true&w=majority
+then add CONNECTION_STRING = mongodb+srv://tom:123@cluster0.vttgrnm.mongodb.net/EpollDb?retryWrites=true&w=majority - type the following :
 
-dotnet user-secrets add "CONNECTION_STRING" "mongodb+srv://tom:123@cluster0.vttgrnm.mongodb.net/EpollDb?retryWrites=true&w=majority" -p Epoll.WebApp
+2) dotnet user-secrets add "CONNECTION_STRING" "mongodb+srv://tom:123@cluster0.vttgrnm.mongodb.net/EpollDb?retryWrites=true&w=majority" -p Epoll.WebApp
 
 this prevents valuable keys to be published e.g. github
 
-to check if it worked - dotnet user-secrets list -p Epoll.WebbApp
+to check if it worked -:  dotnet user-secrets list -p Epoll.WebbApp
 
 
   In the package.json : include 
