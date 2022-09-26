@@ -1,10 +1,11 @@
 This is the backend 
 
-Created with c# and mongoDB 
+Created with c# and mongoDB as it was requested
 
 Basic Get, Post and Put operations using .net api app framework and connecting it to the mongoDB cloud servers 
 
  model for our database what is a poll below is our model
+ we dont need to define the id of our data because bsonId does it for us 
  
         public class EpollModel
     
